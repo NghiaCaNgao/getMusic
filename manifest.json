@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Nghe nhạc vip",
+    "version": "0.0.1",
+
+    "description": "Tool tải và nghe nhạc vip từ zing mp3",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "icon.png",
+            "24": "icon.png",
+            "32": "icon.png"
+        },
+        "default_title": "Tool tải và nghe nhạc vip từ zing mp3",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "author": "nghiacangao_btteam",
+    "permissions": [
+        "tabs",
+        "declarativeContent",
+        "activeTab"
+    ]
+}

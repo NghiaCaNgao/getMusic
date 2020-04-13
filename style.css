@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+ :root {
+    --text-color-1: white;
+    --text-color-2: rebeccapurple;
+    --border-color-1: rebeccapurple;
+    --bg-color-1: #537a9e;
+    --bg-color-2: #3c1e5bbb;
+    --bg-button-1: white;
+    --bg-button-hover-1: #ef9d58a3;
+    --bg-button-hover-2: black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 300px;
+    max-height: 500px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bg-color-1);
+    color: var(--text-color-1);
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+header {
+    padding: 10px;
+}
+
+header a {
+    color: var(--text-color-2);
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+    float: right;
+}
+
+header a:hover {
+    border-radius: 20px;
+    background-color: var(--bg-button-hover-1)
+}
+
+header input {
+    height: 30px;
+    width: 70%;
+    float: left;
+    border-radius: 20px;
+    border: var(--border-color-1) 2px solid;
+    padding: 0 10px 0 10px;
+    margin: 5px;
+    transition: width .5s;
+    color: var(--text-color-1);
+}
+
+header input:focus {
+    background-color: var(--bg-color-2);
+    width: 80%;
+}
+
+.panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.panel:hover {
+    background-color: var(--bg-color-2);
+    color: var(--text-color-1);
+}
+
+.panel ._img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.panel ._title {
+    font-size: 1.1em;
+    font-weight: 500;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+.panel ._tool {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.panel:hover ._tool {
+    opacity: 1;
+}
+
+.panel ._tool a {
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 5px;
+    color: var(--text-color-1);
+}
+
+.panel ._tool a:hover {
+    background-color: var(--bg-button-hover-2);
+}
+
+.container {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.result_num {
+    height: 0px;
+    opacity: 0;
+    transition: all .5s;
+    color: var(--text-color-1);
+    font-weight: 800;
+    font-size: 1.2em;
+    padding-left: 10px;
+    background-color: var(--bg-color-2);
+    line-height: 30px;
+}
